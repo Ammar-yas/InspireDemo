@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "844737537704",
+    "firebase_url": "https://insipiredemo.firebaseio.com",
+    "project_id": "insipiredemo",
+    "storage_bucket": "insipiredemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844737537704:android:a1ebb4a154cd3bee",
+        "android_client_info": {
+          "package_name": "com.ammaryasser.inspiredemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844737537704-6c867gc6l2ar3r67p8qh3hp1ub0vpknu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ammaryasser.inspiredemo",
+            "certificate_hash": "a45b3fe9dda51fa1942493e3aa544016ee34c873"
+          }
+        },
+        {
+          "client_id": "844737537704-tjihj0863g8k17pd94r542heel59j3q5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMcBgOvujb1VEVa21XLSCJgm5sOLixcQ0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844737537704-tjihj0863g8k17pd94r542heel59j3q5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
