@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="repository"
+            type="com.ammaryasser.inspiredemo.RepoModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:elevation="4dp"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_8sdp">
+
+            <ImageView
+                android:id="@+id/avatarIV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp" />
+
+            <TextView
+                android:id="@+id/repoNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avatarIV"
+                android:text="@{repository.name}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repoNameTV"
+                android:text="@{repository.description}" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
