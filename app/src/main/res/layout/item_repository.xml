@@ -2,9 +2,14 @@
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="repository"
-            type="com.ammaryasser.inspiredemo.RepoModel" />
+            type="com.ammaryasser.inspiredemo.RepositoryModel" />
+
+        <variable
+            name="picasso"
+            type="com.squareup.picasso.Picasso" />
     </data>
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,7 +27,9 @@
             <ImageView
                 android:id="@+id/avatarIV"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_150sdp" />
+                android:layout_height="@dimen/_150sdp"
+                app:picasso="@{picasso}"
+                app:url="@{repository.imageUrl}" />
 
             <TextView
                 android:id="@+id/repoNameTV"

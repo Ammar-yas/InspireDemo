@@ -2,7 +2,7 @@ package com.ammaryasser.inspiredemo;
 
 import com.google.gson.annotations.SerializedName;
 
-public class RepoModel {
+public class RepositoryModel {
 
     @SerializedName("name")
     private String name;
@@ -10,6 +10,12 @@ public class RepoModel {
     private String description;
     @SerializedName("owner")
     private Owner owner;
+
+    public RepositoryModel(String name, String description, String url) {
+        this.name = name;
+        this.description = description;
+        this.owner = new Owner(url);
+    }
 
     public String getName() {
         return name;
@@ -26,6 +32,10 @@ public class RepoModel {
     class Owner {
         @SerializedName("avatar_url")
         private String url;
+
+        public Owner(String url) {
+            this.url = url;
+        }
 
         public String getUrl() {
             return url;
