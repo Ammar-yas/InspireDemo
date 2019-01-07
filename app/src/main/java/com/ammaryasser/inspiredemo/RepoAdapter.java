@@ -35,8 +35,7 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepositoryView
     @NonNull
     @Override
     public RepositoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        ItemRepositoryBinding binding = DataBindingUtil.inflate(layoutInflater, R.layout.item_repository, parent, false);
+        ItemRepositoryBinding binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.item_repository, parent, false);
         return new RepositoryViewHolder(binding);
     }
 
