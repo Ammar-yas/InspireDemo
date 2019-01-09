@@ -6,11 +6,10 @@ import com.ammaryasser.inspiredemo.components.DaggerMainActivityComponent;
 import com.ammaryasser.inspiredemo.components.MainActivityComponent;
 import com.ammaryasser.inspiredemo.modules.HomeActivityModule;
 
-import java.util.ArrayList;
-
 import javax.inject.Inject;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Inject
     RepoAdapter repoAdapter;
+
+    @Inject
+    RepositoryViewModelFactory viewModelFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.repositoriesRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(repoAdapter);
-        ArrayList<RepositoryModel> repositoryModels = new ArrayList<>();
-        repositoryModels.add(new RepositoryModel("TEST REPO", "this is a test repository", "https://i.chzbgr.com/full/3154883328/h46B58259/"));
-        repoAdapter.setRepositories(repositoryModels);
+
+        ViewModelProviders.of(this, viewModelFactory).get(RepositoryViewModel.class)
+                .getRepositoryList().observe(this, newRepoList -> {
+            repoAdapter.setRepositories(newRepoList);
+        });
     }
 }

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import com.ammaryasser.inspiredemo.databinding.ItemRepositoryBinding;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -25,6 +26,7 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepositoryView
     public RepoAdapter(Context context, Picasso picasso) {
         this.context = context;
         this.picasso = picasso;
+        repositories = new ArrayList<>();
     }
 
     public void setRepositories(List<RepositoryModel> repositories) {
